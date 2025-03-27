@@ -1,26 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from './component/Navbar.jsx'
+import Hero from './component/Hero.jsx'
+import HomeCards from './component/HomeCards.jsx'
+import JobListing from './component/JobListings.jsx'
+import ViewAllJobs from './component/ViewAllJobs.jsx'
 
 const App = () => {
-  const name="Vite"
-  const names=["Rohit", "Mohit", "Sohit"]
-  const loggedin=true;
-  const styles={
-    color:"red",
-    fontSize:"24px"
-  }
   return (
     <>
-      <div className="text-5xl">Hello {name}</div>
-      <p style={styles}>Hello Rohit</p>
-      <ul>
-        {names.map((name,index)=>(
-          <li key={index}>{index} {name}</li>
-        ))}
-      </ul>
-      {loggedin ? <div>Logged In</div> : <div>Logged Out</div>}
+    <Navbar />
+    <Hero />
+    <HomeCards />
+    <JobListing />
+    <ViewAllJobs />
     </>
-   
   )
 }
-
 export default App
